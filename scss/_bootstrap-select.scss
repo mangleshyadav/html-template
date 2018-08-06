@@ -1,0 +1,25 @@
+.bootstrap-select.show-tick a.dropdown-item {
+    font-family: FontAwesome;
+}
+
+.bootstrap-select.show-tick a.dropdown-item:before {
+    content: "\f00c";
+    position: relative;
+    left: -10px;
+}
+
+.bootstrap-select>.dropdown-toggle.bs-placeholder,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:active,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+    color: #fff;
+}
+
+
+.bootstrap-select .btn {
+    
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+  
+}

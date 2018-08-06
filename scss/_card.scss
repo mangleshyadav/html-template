@@ -1,0 +1,41 @@
+.card-header,
+.card-detail {
+    color: #777;
+}
+
+.card .card-header strong{
+    font-size: 1rem;
+}
+.card-detail,
+.card-name {
+    font-size: 0.8rem;
+}
+
+.card-name {
+    text-align: center;
+    color: #00245d;
+}
+
+.card-image.img-fluid {
+    width: 100%;
+}
+
+.card-columns .card,
+.card-border .card {
+    border-width: 0px;
+        box-shadow: 0px 1px 2px 0px #ccc;
+}
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 3 !important;
+        column-gap: 1.25rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 5 !important;
+        column-gap: 1.25rem;
+    }
+}

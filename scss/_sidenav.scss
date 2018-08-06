@@ -1,0 +1,233 @@
+/*************************** sidenav styling ****************************/
+
+.sidenav {
+    z-index: 1000;
+    position: absolute; // background: #fff; // top: 70px; use body bg color
+    width: 0px;
+    overflow-y: hidden;
+    overflow-x: hidden; // box-shadow: 1px 1px 0px #ccc;
+    /*transition: all 0.3s ease;*/
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    min-height: 100%;
+    .nav {
+        &.flex-column {
+            border-top: 1px solid #ccc;
+        }
+        width: 250px;
+        min-height: 100%;
+        li.nav-item {
+            border-bottom: 1px dotted #9a9fa5;
+        }
+        .nav-item {
+            .nav-link {
+                &:hover {
+                    background-color: #f7f7f7;
+                }
+                &.active {
+                    background-color: $primary;
+                    color: #fff;
+                    span {
+                        color: #fff;
+                    }
+                }
+                display: block;
+                padding: .7rem 1rem;
+                span {
+                    color: #636363;
+                }
+            }
+        }
+    }
+}
+
+
+/***************************  offcanvas styling ***************************/
+
+.offcanvas {
+    .sidenav {
+        width: 250px;
+        .nav {
+            padding: 0px !important;
+            li.nav-item {
+                border-bottom: 1px dotted #9a9fa5;
+                padding: 0px 7px;
+            }
+            .button-group-section {
+                display: block;
+            }
+        }
+    }
+    .sidenav:hover {
+        width: 250px;
+        box-shadow: 0px 1px 1px 1px #ccc;
+    }
+}
+
+.offcanvas .sidenav .nav.flex-column {
+    border-top: 0px solid transparent;
+}
+
+
+/************************************ media queries **************************************/
+
+@media (min-width: 576px) {
+    .offcanvas .sidenav nav .navbar-brand {
+        display: none;
+    }
+    main header nav .navbar-brand {
+        display: none;
+    }
+    .offcanvas main header nav .navbar-brand {
+        display: block;
+        margin-left: -55px;
+        position: relative;
+        z-index: 9999;
+    }
+    .content-wrapper {
+        padding-left: 250px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        padding-right: 0px;
+        /*transition: all 0.3s ease;*/
+    }
+    .content {
+        border-left: 1px solid #ccc;
+    }
+    .sidenav {
+        width: 250px; // box-shadow: 1px 1px 0px #ccc;
+        height: 100%;
+        position: fixed;
+       // background: #f1f1f1;
+    }
+    .offcanvas .content-wrapper {
+        padding: 0px 0px 0px 55px;
+        .content {
+            border-left: 1px solid #ccc;
+        }
+    }
+    .offcanvas .sidenav {
+        width: 55px;
+        background:#ccc;
+    }
+    .offcanvas .sidenav:hover {
+        width: 250px;
+        box-shadow: 0px 1px 1px 1px #ccc;
+    }
+    .offcanvas .sidenav .userProfile {
+        display: none;
+    }
+    .offcanvas ul.nav.flex-column .button-group-section {
+        display: none!important;
+    }
+}
+
+#toggle-offcanvas {
+    text-decoration: none;
+}
+
+@media (max-width: 576px) {
+    .offcanvas main header nav .navbar-brand {
+        display: none;
+    }
+    .content-wrapper {
+        padding: 0px;
+    }
+    .offcanvas .sidenav,
+    .sidenav {
+        -webkit-transition: all 0s ease;
+        -moz-transition: all 0s ease;
+        -o-transition: all 0s ease;
+    }
+    .content,
+    .header,
+    .footer {
+        background-color: #fff;
+        min-width: 300px;
+        -webkit-transition: all 0s ease;
+        -moz-transition: all 0s ease;
+        -o-transition: all 0s ease;
+        /*transition: all 0.3s ease;*/
+    }
+    .offcanvas .content-wrapper {
+        padding-left: 250px;
+        padding-right: 0px;
+        .content {
+            border-left: 1px solid #ccc;
+        }
+    }
+    .offcanvas .content.p-3 {
+        opacity: 0.4;
+        min-width: 300px;
+    }
+}
+
+.sidenav {
+    .userProfile {
+        min-width: 200px;
+        margin: 10px;
+        padding-bottom: 5px;
+        height: auto;
+        background: url(../img/profileBg.png) repeat;
+        img {
+            text-align: left;
+            vertical-align: text-top;
+            float: left;
+            margin: 10px 8px 0 10px;
+        }
+        .profileName {
+            margin-top: 10px;
+            width: 140px;
+            float: left;
+            color: #262e5a;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .profileTitle {
+            color: #4c4c4c;
+            font-size: 14px;
+            float: left;
+        }
+        .signOn {
+            text-align: right;
+            margin: 5px 10px 5px 0;
+            font-size: 14px;
+        }
+    }
+    .nav {
+        .nav-link {
+            i {
+                background-position: left;
+                height: 22px;
+                width: 40px;
+                z-index: 9999;
+                position: relative;
+                background-repeat: no-repeat;
+                &.icon-check-in {
+                    background-image: url(../img/icnCheckInOff.png);
+                }
+                &.icon-pto {
+                    background-image: url(../img/icnPtoOff.png);
+                }
+                &.icon-screen-shots {
+                    background-image: url(../img/icnScreenShotsOff.png);
+                }
+            }
+            &.active {
+                i {
+                    &.icon-check-in {
+                        background-image: url(../img/icnCheckInOn.png);
+                    }
+                    &.icon-pto {
+                        background-image: url(../img/icnPtoOn.png);
+                    }
+                    &.icon-screen-shots {
+                        background-image: url(../img/icnScreenShotsOn.png);
+                    }
+                }
+            }
+        }
+    }
+}

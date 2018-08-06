@@ -1,0 +1,19 @@
+@each $color,
+$value in (primary:$btn-primary, secondary:$btn-secondary, success:$btn-success, warning:$btn-warning, danger:$btn-danger) {
+    .btn-#{$color} {
+        @include button-variant($value, $value);
+    }
+}
+
+@each $color,
+$value in (primary:$btn-primary, secondary:$btn-secondary, success:$btn-success, warning:$btn-warning, danger:$btn-danger) {
+    .btn-outline-#{$color} {
+        @if $color=="light" {
+            @include button-outline-variant($value, $gray-900);
+        }
+        @else {
+            @include button-outline-variant($value, $white);
+        }
+    }
+}
+

@@ -1,0 +1,54 @@
+table.alert-table {
+    border: 1px solid #DFDFDF;
+    thead {
+        background: $primary;
+        th {
+            padding: 10px;
+            color: $white;
+            font-weight: initial;
+            border-bottom: 0px solid #dee2e6 ; 
+            &.name {
+                max-width: 350px;
+                width: 300px;
+            }
+            &.status {
+                max-width: 120px;
+                width: 100px;
+            }
+            &.actions {
+                max-width: 180px;
+                width: 120px;
+            }
+        }
+    }
+    tbody {
+        tr:nth-child(even) {
+            background: #F2F2F2;
+        }
+        tr td {
+            color: #777873;
+            vertical-align: middle;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .table-responsive {
+        display: table;
+    }
+}
+
+@media (max-width: 1200px) {
+    table.alert-table.table thead th.status {
+        min-width: 120px;
+    }
+    table.alert-table.table thead th.name {
+        min-width: 250px;
+    }
+    table.alert-table.table thead th.condition {
+        min-width: 520px;
+    }
+    table.alert-table.table thead th.actions {
+        min-width: 120px;
+    }
+}

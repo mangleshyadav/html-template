@@ -1,0 +1,36 @@
+
+/* override bootstrap variables in theme-navera */
+
+@import "theme-navera";
+
+/* required files to override bootstrap css*/
+
+@import "./../node_modules/bootstrap/scss/bootstrap";
+@import "./../node_modules/bootstrap/scss/functions";
+@import "./../node_modules/bootstrap/scss/variables";
+@import "./../node_modules/bootstrap/scss/mixins";
+
+/* override bootstrap components css*/
+@import "alerts";
+@import "buttons";
+@import "form-control";
+@import "table";
+@import "validation";
+@import 'fontawesome-sizes';
+
+
+/* Custom css*/
+
+@import 'sidenav';
+@import 'date-range-picker';
+@import 'custom';
+@import 'switch';
+@import 'card';
+@import 'choosen';
+
+// @import 'tab-dropdown';          // not used
+// @import 'wizard';                // not used
+// @import 'progress-bar';          // not used 
+// @import 'bootstrap-select';      // not used 
+
+
