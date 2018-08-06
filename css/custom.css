@@ -15,3 +15,7 @@
 .chosen-container-multi .chosen-choices li.search-field input[type='text']{
     font-family: Arial;
 }
+
+.navbar.navbar-expand-lg {
+    background: #2c387e;
+}
