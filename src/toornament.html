@@ -9,13 +9,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./../vendor/chosen_v1.8.2/chosen.css">
-    <link rel="stylesheet" href="../css/jqx.base.css" type="text/css" />
 
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
     <link rel="stylesheet" href="../css/master.css">
-    <link rel="stylesheet" href="../css/jqxGridStyle.css">
     <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
 
 
 </head>
@@ -26,12 +23,16 @@
 
     <aside class="sidenav">
         <nav class="navbar navbar-expand-lg navbar-light  d-flex pt-2">
-            <a class="navbar-brand pr-4" href="#"><span style="size:15px; color:#fff;">Template<span></a>
+            <a class="navbar-brand pr-4" href="#">
+                <span style="size:15px; color:#fff;">Template
+                    <span>
+            </a>
         </nav>
-       
+
         <ul class="nav flex-column">
             <li class="nav-item p-0">
-                <a class="nav-link pl-sm-3 d-flex align-items-center" href="home.html"> <i class="fa fa-h-square fa-lg pr-3 pt-1" aria-hidden="true"></i>Home</a>
+                <a class="nav-link pl-sm-3 d-flex align-items-center" href="home.html">
+                    <i class="fa fa-h-square fa-lg pr-3 pt-1" aria-hidden="true"></i>Home</a>
             </li>
             <li class="nav-item p-0">
                 <a class="nav-link pl-sm-3 active d-flex align-items-center" href="toornament.html">
@@ -42,49 +43,54 @@
                     <i class="fa fa-file-text fa-lg pr-3" aria-hidden="true"></i>Reports</a>
             </li>
             <li class="nav-item p-0">
-                <a class="nav-link pl-sm-3 d-flex align-items-center" href="news.html"><i class="fa fa-newspaper-o fa-lg pr-3" aria-hidden="true"></i>News</a>
+                <a class="nav-link pl-sm-3 d-flex align-items-center" href="news.html">
+                    <i class="fa fa-newspaper-o fa-lg pr-3" aria-hidden="true"></i>News</a>
             </li>
             <li class="nav-item p-0 border-0">
-                <a class="nav-link pl-sm-3 d-flex align-items-center" href="booking.html"><i class="fa fa-exclamation-circle  fa-lg pr-3 pt-1" aria-hidden="true"></i>Bokking</a>
+                <a class="nav-link pl-sm-3 d-flex align-items-center" href="booking.html">
+                    <i class="fa fa-exclamation-circle  fa-lg pr-3 pt-1" aria-hidden="true"></i>Bokking</a>
             </li>
         </ul>
     </aside>
     <main class="col content-wrapper">
         <header class="header">
             <nav class="navbar navbar-expand-lg navbar-light pt-2">
-                <a class="navbar-brand pr-4" href="#"><span style="size:15px; color:#fff;">Template<span></a>
+                <a class="navbar-brand pr-4" href="#">
+                    <span style="size:15px; color:#fff;">Template
+                        <span>
+                </a>
                 <a name="" id="toggle-offcanvas" class=" border-0 ml-xs-auto ml-1 d-flex align-items-center py-2" href="#" role="button">
-                     <i class="fa fa-bars fa-lg text-white" aria-hidden="true"></i>
+                    <i class="fa fa-bars fa-lg text-white" aria-hidden="true"></i>
                 </a>
             </nav>
         </header>
         <div class="content p-4">
             <nav aria-label="breadcrumb" role="navigation">
                 <ol class="breadcrumb bg-white px-0 mb-2 pt-0">
-                    <li class="breadcrumb-item "> <i class="fa fa-h-square fa-lg" aria-hidden="true"></i> <a href="#" class="text-secondary">Home</a></li>
+                    <li class="breadcrumb-item ">
+                        <i class="fa fa-h-square fa-lg" aria-hidden="true"></i>
+                        <a href="#" class="text-secondary">Home</a>
+                    </li>
                     <li class="breadcrumb-item text-dark" aria-current="page">Tournament</li>
                 </ol>
             </nav>
             <h2 class="text-primary pageHeader">Tournament</h2>
-            <div class="row pt-3">
-                <div class="d-md-flex justify-content-between col p-0">
-                    <div class="form-group col-12 col-sm-12 col-md-4">
-                        <select data-placeholder="Filter By Employees" class="form-control p-0  my_select_box" multiple="" tabindex="3">
-                            <option value=""></option>
-                            <option value="Ronaldo">Ronaldo</option>
-                            <option value="Sachin">Sachin</option>
-                            <option value="Jenny">Jenny</option>    
-                            <option value="Joyel">Joyel</option>       
-                        </select>
-                    </div>
-                    <div class="form-group col-12 col-sm-12 col-md-4 date-range-picker">
-                        <input type="text" id="demo" class="form-control pull-right picker">
-                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                    </div>
-                </div>
-            </div>
+            <div class="row">
+                <div class="col-12  pr-md-2 ">
+                    <table id="example" class="display table table-bordered  table-responsive" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Extn.</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </thead>
 
-            <div id="jqxgrid">
+                    </table>
+                </div>
 
             </div>
         </div>
@@ -99,7 +105,7 @@
 
                             <ul class="nav footer-nav-center d-flex justify-content-center">
                                 <li class="nav-item">
-                                    <a class="nav-link px-1 py-0 text-white " href="home.html">Home  </a>
+                                    <a class="nav-link px-1 py-0 text-white " href="home.html">Home </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link px-1 py-0 text-white" href="toornament.html">Tournament </a>
@@ -115,7 +121,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-12 col-lg-auto text-center"> <span>Template</span></div>
+                        <div class="col-12 col-lg-auto text-center">
+                            <span>Template</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,150 +132,22 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="./../vendor/chosen_v1.8.2/chosen.jquery.js"></script>
-    <script>
-        $(".my_select_box").chosen({
-            disable_search_threshold: 10,
-            no_results_text: "Oops, nothing found!"
-        });
-    </script>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
     <script src="./../js/index.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
 
-    <script type="text/javascript">
-        $('#demo').daterangepicker({
-            "showDropdowns": true,
-            "autoApply": true,
-            "startDate": "01/13/2018",
-            "endDate": "01/19/2018"
-        });
-    </script>
-
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap-select.js"></script>
-    <script type="text/javascript" src="../js/scripts.js"></script>
-    <script type="text/javascript" src="../js/respond.min.js"></script>
-    <script type="text/javascript" src="../js/dual-list-box.js"></script>
-
-    <!-- JqxGrid Js-->
-    <script type="text/javascript" src="../js/grid/jqxcore.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxdata.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxbuttons.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxmenu.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxcheckbox.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxlistbox.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxdropdownlist.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxgrid.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxgrid.sort.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxgrid.pager.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxgrid.selection.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxgrid.edit.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxgrid.columnsresize.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxpanel.js"></script>
-    <script type="text/javascript" src="../js/grid/jqxgrid.filter.js"></script>
-    <script type="text/javascript">
+    <script>
         $(document).ready(function () {
-            // prepare the data
-            var data = new Array();
-            var rowscount;
-            if (rowscount == undefined) rowscount = 20;
-            var employeeNamesValues = [
-                "Andrew", "Nancy", "Shelley", "Regina", "Yoshi", "Antoni", "Mayumi", "Ian", "Peter", "Lars", "Petra", "Martin", "Sven", "Elio", "Beate", "Cheryl", "Michael", "Guylene"
-            ];
-
-            var mondayinValues = [
-                "7.00 AM", "7.00 AM", "7.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM", "8.00 AM"
-            ];
-            var mondayoutValues = [
-                "4.00 AM", "4.00 AM", "4.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM", "5.00 PM"
-            ];
-            var mondaytotalValues = [
-                "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs",
-            ];
-
-            var tuesdayinValues = [
-                "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "7.00 AM", "8.00 AM"
-            ];
-            var tuesdayoutValues = [
-                "4.00 AM", "4.00 AM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "4.00 PM", "5.00 PM"
-            ];
-            var tuesdaytotalValues = [
-                "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs", "9.00 HRs",
-            ];
-
-            var lastNames =
-                [
-                    "Fuller", "Davolio", "Burke", "Murphy", "Nagase", "Saavedra", "Ohno", "Devling", "Wilson", "Peterson", "Winkler", "Bein", "Petersen", "Rossi", "Vileid", "Saylor", "Bjorn", "Nodier"
-                ];
-
-            for (var i = 0; i < rowscount; i++) {
-                var row = {};
-                var namesindex = Math.floor(Math.random() * employeeNamesValues.length);
-
-                var employeename = employeeNamesValues[namesindex];
-
-                var mondayin = mondayinValues[namesindex];
-                var mondayout = mondayoutValues[namesindex];
-                var mondaytotal = mondaytotalValues[namesindex];
-
-                var tuesdayin = tuesdayinValues[namesindex];
-                var tuesdayout = tuesdayoutValues[namesindex];
-                var tuesdaytotal = tuesdaytotalValues[namesindex];
-                row["employeename"] = employeeNamesValues[namesindex];
-                row["mondayin"] = mondayinValues[namesindex];
-                row["mondayout"] = mondayoutValues[namesindex];
-                row["mondaytotal"] = mondaytotalValues[namesindex];
-                row["tuesdayin"] = tuesdayinValues[namesindex];
-                row["tuesdayout"] = tuesdayoutValues[namesindex];
-                row["tuesdaytotal"] = tuesdaytotalValues[namesindex];
-                data[i] = row;
-            }
-            var source =
-                {
-                    localdata: data,
-                    datatype: "array",
-                    datafields: [
-                        { name: 'employeename', type: 'string' },
-                        { name: 'mondayin', type: 'string' },
-                        { name: 'mondayout', type: 'string' },
-                        { name: 'mondaytotal', type: 'string' },
-                        { name: 'tuesdayin', type: 'string' },
-                        { name: 'tuesdayout', type: 'string' },
-                        { name: 'tuesdaytotal', type: 'string' }
-                    ]
-                };
-            var dataAdapter = new $.jqx.dataAdapter(source);
-
-            $("#jqxgrid").jqxGrid(
-                {
-                    width: '100%',
-                    filterable: false,
-                    // selectionmode: 'multiplecellsextended',
-                    selectionmode: 'checkbox',
-                    // theme: 'metro',
-                    source: dataAdapter,
-                    sortable: true,
-                    pageable: true,
-                    autoheight: true,
-                    columnsresize: true,
-                    pagermode: 'simple', // simple pager mode 
-                    columns: [
-                        { text: 'Employee Name', datafield: 'employeename', columngroup: 'Name', width: '15%' },
-                        { text: 'Monday 7/1-In', datafield: 'mondayin', width: '15%' },
-                        { text: 'Monday 7/1-Out', datafield: 'mondayout', width: '15%' },
-                        { text: 'Monday 7/1-Total', datafield: 'mondaytotal', width: '15%' },
-                        { text: 'Monday 7/2-In', datafield: 'tuesdayin', width: '15%' },
-                        { text: 'Monday 7/2-Out', datafield: 'tuesdayout', width: '15%' },
-                        { text: 'Monday 7/2-Total', datafield: 'tuesdaytotal', width: '15%' }
-                    ]
-                });
+            $('#example').DataTable({
+                "ajax": "./../data/arrays.txt"
+            });
         });
     </script>
 </body>
